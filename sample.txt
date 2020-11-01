@@ -1,0 +1,63 @@
+var entry1=document.getElementById("entry");
+entry1.addEventListener("click",displayDetails);
+
+var row = 1;
+
+function displayDetails()
+{
+  var name1=document.getElementById("n1").value;
+  var email1=document.getElementById("n2").value;
+  var phone1=document.getElementById("n3").value;
+  var apart1=document.getElementById("n4").value;
+
+  var display=document.getElementById("displaytable");
+  var newrow=display.insertRow(row);
+  
+  var cell1=newrow.insertCell(0);
+  var cell2=newrow.insertCell(1);
+  var cell3=newrow.insertCell(2);
+  var cell4=newrow.insertCell(3);
+
+  cell1.innerHTML = name1;
+  cell2.innerHTML = email1;
+  cell3.innerHTML = phone1;
+  cell4.innerHTML = apart1;
+
+  row++;
+
+}
+
+function validation()
+{
+  var username=document.getElementById("n1").value;
+  var useremail=document.getElementById("n2").value;
+  var userphone=document.getElementById("n3").value;
+  var userapart=document.getElementById("n4").value;
+
+ if(username.length<3 || username.length>30)
+  {
+  alert("enter valid name");
+  return false;
+  }
+
+  if(useremail.indexOf("@") == -1 || useremail.length<10)
+  {
+    alert("Enter valid email");
+  return false;
+  }
+
+  if(isNaN(userphone) || userphone.length!=10)
+  {
+    alert("enter valid phone number");
+  return false;
+  }
+  if(userapart=="---Choose Option")
+  {
+    alert("Select required apartment type");
+  return false;
+  }
+  alert("Form submitted successfully!")
+  return true;
+}
+
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Registration Page
+            </title>
+            <link href="style.css" rel="stylesheet">
+            <script src="script.js"></script>
+        </head>
+            
+            <body>
+              <div class="container">
+                  <nav class="navbar">
+                    <img src="lo2.png">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#register">Register</a></li>
+                    <li><a href="#display">Display</a></li>
+                    </ul>  
+                </nav>     
+                  <section id="home">
+                    <h1>World's Largest NoBrokerage <br>Property Site.</h1>
+                </section>
+                <section id="register">
+                   <div class="regform">
+                       <h2 id="he1"> Registration</h2>
+                       
+                       <div class="main">
+                           <form id="myform">
+                               <div id="name">
+                                   <h3 class="name">Name</h3>
+                                   <input  class="fullname" type="text" name="name" id="n1">
+                                </div>
+                               <h3 class="name">Email</h3>
+                               <input class="email" type="text" name="email" id="n2">
+                               <h3 class="name">Phone</h3>
+                               <input class="code" type="text" name="area_code" id="n3">
+                               
+                               <h3 class="name">Apartment Type</h3>
+                               <select class="option"  name="flat_type" id="n4">
+                               <option disabled="disabled" selected="selected">---Choose Option</option>
+                               <option>1 RHK</option>
+                               <option>1 BHK</option>
+                               <option>2 BHK</option>
+                               <option>3 BHK</option>
+                               <option>4 BHK</option>
+                               <option>Bunglow</option>
+                               </select>
+                               
+                            <button type="submit" onclick="displayDetails()">Book Now</button>
+                            
+                            
+                        </form>
+
+                       </div>
+                   </div>
+                </section>
+                <section id="display">
+
+                <div class="">
+                    <table class="table controls controls-row">
+                        <thead>
+                            <tr id="heading">
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone_number</th>
+                            <th>Apartment</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+
+
+            </div>
+            <script src="script.js"></script>
+           </body>
+           
+        
+    </html>
